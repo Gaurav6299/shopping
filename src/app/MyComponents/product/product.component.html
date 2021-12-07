@@ -1,0 +1,27 @@
+<div class="container">
+    <div >
+        <div class="row">
+            <app-product-list [product]="product"></app-product-list>
+        </div>
+    </div>
+</div>
+<h2 class="text-white text-center bg-success my-5">Product</h2>
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+           
+        </tr>
+
+        
+        <tr *ngFor="let pro of product">
+            <td>{{pro.id}}</td>
+            <td>{{pro.name}}</td>
+            <td>{{pro.quantity}}</td>
+            <td>{{pro.price}}</td>
+        </tr>
+    </table>
+</div>

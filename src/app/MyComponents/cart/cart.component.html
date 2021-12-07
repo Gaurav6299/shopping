@@ -1,0 +1,29 @@
+<!-- <img src="./assets/img/cart1.jpg"> -->
+<h2 class="text-center bg-primary text-white">My Cart</h2>
+<div class="cart product">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let pro of data">
+                <div class="card myImg my-3">
+                    <img class="card-img-top" src={{pro.image}} alt="Card image cap">
+                    <div class="card-body cardSec">
+                        <button (click)="addQuantity(pro)">+</button>
+                        <!-- <div *ngIf="pro.quantity==0; else elseBlock">
+                            <input type="text" value={{pro.quantity}} class="myText" name="cart" readonly>
+                        </div> -->
+                        <!-- <ng-template #elseBlock> -->  
+                        <input type="text" value={{pro.quantity}} class="myText" name="cart" readonly>
+                        <!-- </ng-template> -->
+                        <button (click)="deleteQuantity(pro)">-</button>
+                        <h5 class="my-2 text-danger text-center">{{pro.name}}</h5>
+                        <h5 class="text-center text-primary">Price {{pro.price}}</h5>
+                    </div>
+                    <button type="button" (click)="delete(pro)" class="btn btn-danger mt-3">Delete</button>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <h2 class="text-success">Total Price {{count}}</h2>
+
+</div>
+<!-- <app-total [totaldata]="data"></app-total> -->

@@ -1,0 +1,23 @@
+<section class="main">
+    <div class="headerpart">
+        <div class="product">
+            <div class="container">
+                <div class="row my-3">
+                    <div class="col-md-3" *ngFor="let pro of product">
+                        <div class="card myImg my-3">
+                            <img class="card-img-top" src={{pro.image}} #image alt="Card image cap">
+                            <div class="card-body cardSec">
+                                <button (mydata)="addData($event)" (click)="addData(pro)" (remove)="removeData($event)">+</button>
+                                <input type="text" class="myText" name="data" #datas value={{pro.quantity}} readonly>
+                                <button (mydata)="subData($event)"(click)="subData(pro)">-</button>
+                                <h5 class="my-2 text-danger text-center">{{pro.name}}</h5>
+                                <h5 class="text-center text-primary">Price {{pro.price}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-cart [data]="myArray" [count]="count"></app-cart>

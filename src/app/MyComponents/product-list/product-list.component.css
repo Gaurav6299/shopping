@@ -1,0 +1,26 @@
+.myImg img{
+    height: 291px;
+    cursor: pointer;
+   
+}
+
+.myImg:hover{
+    transform:translateY(-3px)
+}
+.product{
+    display: flex;
+}
+.product .myImg{
+    margin-right: 20px;
+}
+
+.myText{
+    width: 27px;
+    margin-left: 14px;
+    margin-right: 13px;
+}
+
+.cardSec{
+    margin: auto;
+    
+}
